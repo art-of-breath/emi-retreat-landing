@@ -1,5 +1,6 @@
 /* ============================================================
-   Mutterlinien · Workshop-Landingpage
+   Breathwork Retreat 07./08.11.2026 · Landingpage
+   Geschwister der Mutterlinien-Seite, gleiches Stylesheet.
    Designsystem 1:1 aus emi-atmet.de (brand/design-system.md).
    Keine neuen Farben, keine neuen Schriften, keine CDNs.
    ============================================================ */
@@ -255,7 +256,12 @@ section{padding:var(--sp-6) 0}
   position:absolute; right:-10px; bottom:26px; z-index:2; background:var(--white);
   border-radius:14px; box-shadow:var(--shadow-soft); padding:12px 16px;
   border:1px solid var(--line);
+  /* Seit der Retreat-Seite ein Link zu Trustpilot (voice.md §7). */
+  display:block; text-decoration:none; color:inherit;
+  transition:box-shadow .28s var(--ease), transform .28s var(--ease);
 }
+a.badge:hover{box-shadow:var(--shadow); transform:translateY(-2px)}
+a.badge:focus-visible{border-radius:14px}
 .badge-stars{color:var(--clay); font-size:13px; letter-spacing:.06em}
 .badge-txt{font-size:12.5px; color:var(--ink-faint); margin-top:2px}
 .badge-txt b{color:var(--ink); font-weight:600}
@@ -329,8 +335,8 @@ section{padding:var(--sp-6) 0}
   background:rgba(245,239,231,.05); border:1px solid rgba(245,239,231,.16);
   border-radius:var(--radius-lg); padding:clamp(24px,3vw,30px);
 }
-/* Der Schritt nach dem Workshop-Tag. Volle Breite, weil er außerhalb
-   der vier Stunden liegt und sich optisch absetzen soll. */
+/* Ein Schritt über die volle Breite, wenn er sich vom Rest absetzen soll.
+   Auf der Retreat-Seite ungenutzt (sechs Schritte, drei pro Tag). */
 .step-wide{grid-column:1 / -1}
 .step::before{
   counter-increment:step; content:"0" counter(step);
@@ -436,6 +442,17 @@ section{padding:var(--sp-6) 0}
   color:var(--ink); line-height:1; margin:0 0 6px;
 }
 .price-note{font-size:var(--step--1); color:var(--ink-faint); margin:0}
+/* Retreat: kein Preis auf der Seite. Der Platz von .price trägt eine
+   Serif-Zeile, darunter ein Sans-Label, damit die Karte ihren Ticket-
+   Charakter behält. Werte aus h3/Eyebrow im Designsystem. */
+.book-title{
+  font-family:var(--serif); font-weight:500; font-size:var(--step-3);
+  line-height:var(--lh-snug); letter-spacing:var(--ls-h2); color:var(--ink); margin:0 0 10px;
+}
+.book-meta{
+  font-size:var(--step--1); font-weight:600; letter-spacing:var(--ls-label);
+  text-transform:uppercase; color:var(--clay-deep); margin:0;
+}
 .incl{margin:var(--sp-3) 0 0; display:grid; gap:8px}
 .incl li{
   position:relative; padding-left:24px; font-size:15.5px; color:var(--ink-soft);

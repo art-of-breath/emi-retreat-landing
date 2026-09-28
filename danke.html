@@ -3,14 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dein Platz ist da · Mutterlinien am 12. September | emi.atmet</title>
-<meta name="description" content="Deine Anmeldung für Mutterlinien am 12. September 2026 in Leipzig ist eingegangen.">
+<title>Dein Platz ist da · Breathwork Retreat am 07. &amp; 08. November | emi.atmet</title>
+<meta name="description" content="Deine Anmeldung für das Breathwork Retreat am 07. und 08. November 2026 in Leipzig ist eingegangen.">
 <meta name="robots" content="noindex, nofollow">
 
 <!-- ============================================================
-     Ziel des Stripe-Redirects. Der Payment Link muss hierher
-     zeigen, mit angehängter Session-ID:
-       .../danke.html?session_id={CHECKOUT_SESSION_ID}
+     Ziel des Stripe-Redirects. Beide Payment Links zeigen hierher,
+     mit Session-ID und Tarif-Kennung:
+       Early Bird: .../danke.html?session_id={CHECKOUT_SESSION_ID}&t=eb
+       regulär:    .../danke.html?session_id={CHECKOUT_SESSION_ID}&t=reg
+     t steuert nur den Purchase-Wert für Meta (eb = Early Bird,
+     reg oder fehlend = regulär). Angezeigt wird kein Betrag.
 
      Die Session-ID wird nur als Beleg angezeigt und als Meta
      eventID benutzt. Ohne Backend können wir sie nicht prüfen,
@@ -45,7 +48,7 @@
       <h1 style="max-width:18ch;margin-inline:auto">Dein Platz ist <em>da</em>.</h1>
       <p class="lead" style="margin:0 auto var(--sp-4);max-width:48ch">
         Schön, dass du dabei bist. Die Bestätigung deiner Zahlung liegt gleich in deinem
-        Postfach. Ein paar Tage vor dem Workshop meldet Emi sich noch einmal persönlich bei dir.
+        Postfach. Ein paar Tage vor dem Retreat melden wir uns noch einmal persönlich bei dir.
       </p>
       <div class="breath-wrap" style="padding-top:var(--sp-2)">
         <svg class="breath in" viewBox="0 0 760 40" fill="none" aria-hidden="true" preserveAspectRatio="none"><path pathLength="1" d="M0 20 H150 C210 20 210 6 270 6 C330 6 330 34 380 34 C430 34 430 6 490 6 C550 6 550 20 610 20 H760" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -57,19 +60,22 @@
     <div class="wrap facts-grid">
       <div class="fact">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div><p class="fact-k">Datum</p><p class="fact-v">Samstag, 12. September 2026</p></div>
+        <div><p class="fact-k">Datum</p><p class="fact-v">Sa 07. &amp; So 08. November 2026</p></div>
       </div>
       <div class="fact">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5.2l3.2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div><p class="fact-k">Zeit</p><p class="fact-v">10 bis 14 Uhr</p></div>
+        <!-- OFFEN(Emi): Uhrzeiten beider Tage -->
+        <div><p class="fact-k">Zeit</p><p class="fact-v">Zwei volle Tage</p></div>
       </div>
       <div class="fact">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.5"/></svg>
-        <div><p class="fact-k">Ort</p><p class="fact-v">Element Ost<br><span style="opacity:.7">Schulze-Delitzsch-Straße 19<br>04315 Leipzig</span></p></div>
+        <!-- OFFEN(Emi): Anschrift des Veranstaltungsorts. Hier gehört sie vollständig hin,
+             damit niemand nach der Buchung danach fragen muss. -->
+        <div><p class="fact-k">Ort</p><p class="fact-v">Asana Atelier<br><span style="opacity:.7">Leipzig</span></p></div>
       </div>
       <div class="fact">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="3.4" stroke="currentColor" stroke-width="1.5"/><path d="M3 20c0-3.3 2.7-5.4 6-5.4s6 2.1 6 5.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M16 6.2a3.4 3.4 0 0 1 0 5.6M18.5 20c0-2.4-.9-4.2-2.4-5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div><p class="fact-k">Gruppe</p><p class="fact-v">Max. 12 Teilnehmerinnen</p></div>
+        <div><p class="fact-k">Gruppe</p><p class="fact-v">Kleine Gruppe, zu zweit begleitet</p></div>
       </div>
     </div>
   </section>
@@ -84,12 +90,14 @@
       <div class="frame-cols">
         <div class="frame-card">
           <h3>Was du mitbringst</h3>
-          <p>Zieh etwas Bequemes an und bring ein Journal und einen Stift mit. Alles andere
-          ist vor Ort.</p>
+          <!-- OFFEN(Emi): Packliste für zwei Tage bestätigen (Decke, Kissen, Essen?) -->
+          <p>Zieh an beiden Tagen etwas Bequemes an, das du auch lange im Liegen tragen
+          magst, und bring ein Journal und einen Stift mit. Alles Weitere schicken wir dir
+          ein paar Tage vorher.</p>
         </div>
         <div class="frame-card">
           <h3>Wenn etwas dazwischenkommt</h3>
-          <p>Sag Emi so früh wie möglich Bescheid, dann kann jemand anderes nachrücken.
+          <p>Sag uns so früh wie möglich Bescheid, dann kann jemand anderes nachrücken.
           Die Bedingungen stehen in den
           <a href="teilnahmebedingungen.html" style="color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px">Teilnahmebedingungen</a>.</p>
         </div>
@@ -97,12 +105,12 @@
 
       <div class="note-sage" style="margin-top:var(--sp-4)">
         Wenn sich an deiner gesundheitlichen Situation etwas ändert oder du unsicher bist, ob
-        Breathwork gerade das Richtige für dich ist, schreib Emi bitte vorher. Das ist kein
+        Breathwork gerade das Richtige für dich ist, schreib uns bitte vorher. Das ist kein
         Problem und kostet dich nichts.
       </div>
 
       <p class="cta-note" style="margin-top:var(--sp-4)">
-        Fragen? <a href="mailto:emi.atmet@gmx.de?subject=Mutterlinien%2012.09." style="color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px">emi.atmet@gmx.de</a>
+        Fragen? <a href="mailto:emi.atmet@gmx.de?subject=Retreat%2007.%2F08.11." style="color:var(--clay-deep);text-decoration:underline;text-underline-offset:2px">emi.atmet@gmx.de</a>
       </p>
       <p class="cta-note" id="beleg" hidden>Beleg-Nummer deiner Zahlung: <span id="beleg-id"></span></p>
     </div>
@@ -141,10 +149,16 @@
     box.hidden = false;
   }
 
+  /* Welcher Payment Link bezahlt wurde, steht in t (eb oder reg). Der Wert
+     geht nur an Meta. Serverseitig kommt der echte Betrag aus dem Stripe-
+     Webhook, mit derselben Session-ID als eventID, also ohne Dublette. */
+  var tier = new URLSearchParams(location.search).get('t');
+  var value = tier === 'eb' ? 180 : 200;
+
   if (window.emiConsent) {
     window.emiConsent.track(
       'Purchase',
-      { value: 130, currency: 'EUR', content_name: 'Mutterlinien 12.09.2026' },
+      { value: value, currency: 'EUR', content_name: 'Breathwork Retreat 07.-08.11.2026' },
       sid || undefined
     );
   }

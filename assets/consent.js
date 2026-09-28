@@ -1,5 +1,6 @@
 /* ============================================================
-   Mutterlinien · Einwilligung + Meta Pixel
+   Breathwork Retreat 07./08.11.2026 · Einwilligung + Meta Pixel
+   Übernommen von der Mutterlinien-Seite, Vertrag unverändert.
    ------------------------------------------------------------
    Vertrag (übernommen aus cookie-consent-guide.md des
    Trainer-Projekts, angepasst an Emis Designsystem und an Meta
@@ -24,6 +25,12 @@
   'use strict';
 
   var PIXEL_ID = '4636136706618538';     // Meta Events Manager, eingetragen 31.08.2026
+
+  /* Wert für InitiateCheckout. Wird NIE angezeigt, die Seite nennt keinen Preis.
+     Early Bird bis 03.10.2026: 180. Am 04.10. auf 200 setzen, zusammen mit den
+     zwei Stripe-hrefs in index.html. */
+  var PRICE = 180;
+  var CONTENT_NAME = 'Breathwork Retreat 07.-08.11.2026';
   var KEY = 'emi-consent';
   var CID_KEY = 'emi-cid';
   var MAX_AGE_DAYS = 365;
@@ -218,6 +225,9 @@
     });
     el.querySelector('.cc-no').addEventListener('click', function () {
       write(false); hide();
+      /* Widerruf nach vorheriger Zustimmung: Cookies und cid weg, neu laden.
+         Auf der Mutterlinien-Seite fehlte dieser Aufruf, revokeIfNeeded lief nie. */
+      window.emiConsent.revokeIfNeeded();
     });
     return el;
   }
@@ -271,7 +281,7 @@
     var a = e.target.closest ? e.target.closest('[data-checkout]') : null;
     if (!a) return;
     trackBoth('InitiateCheckout',
-              { value: 130, currency: 'EUR', content_name: 'Mutterlinien 12.09.2026' });
+              { value: PRICE, currency: 'EUR', content_name: CONTENT_NAME });
 
     /* Die Kennung reist als client_reference_id mit zu Stripe. Der Stripe-Webhook
        schickt sie zurueck, und erst dadurch laesst sich der Kauf serverseitig
