@@ -27,9 +27,9 @@
   var PIXEL_ID = '4636136706618538';     // Meta Events Manager, eingetragen 31.08.2026
 
   /* Wert für InitiateCheckout. Wird NIE angezeigt, die Seite nennt keinen Preis.
-     Early Bird bis 03.10.2026: 180. Am 04.10. auf 200 setzen, zusammen mit den
+     Early Bird bis 03.10.2026: 180. Seit 04.10.2026 regulär 200, zusammen mit den
      zwei Stripe-hrefs in index.html. */
-  var PRICE = 180;
+  var PRICE = 200;
   var CONTENT_NAME = 'Breathwork Retreat 07.-08.11.2026';
   var KEY = 'emi-consent';
   var CID_KEY = 'emi-cid';
